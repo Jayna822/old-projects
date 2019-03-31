@@ -1,0 +1,63 @@
+--- HTTP Verbs ---
+There are 4 basic HTTP verbs we use in requests to interact with resources in a REST system:
+
+GET — retrieve a specific resource (by id) or a collection of resources
+POST — create a new resource
+PUT — update a specific resource (by id)
+DELETE — remove a specific resource by id
+
+--- Headers and Accept parameters ---
+text - text/html, text/css, text/plain
+image — image/png, image/jpeg, image/gif
+audio — audio/wav, image/mpeg
+video — video/mp4, video/ogg
+application — application/json, application/pdf, application/xml, application/octet-stream
+
+--- Request ---
+GET http://fashionboutique.com/customers
+Accept: application/json
+
+--- Response ---
+Status Code: 200 (OK)
+Content-type: application/json
+
+---Request---
+POST http://fashionboutique.com/customers
+Body:
+{
+  “customer”: {
+    “name” = “Scylla Buss”
+    “email” = “scylla.buss@codecademy.org”
+  }
+}
+
+---Response---
+Status Code: 201 (CREATED)
+Content-type: application/json
+
+---Request---
+GET http://fashionboutique.com/customers/123
+Accept: application/json
+
+---Response---
+Status Code: 200 (OK)
+Content-type: application/json
+
+---Request---
+PUT http://fashionboutique.com/customers/123
+Body:
+{
+  “customer”: {
+    “name” = “Scylla Buss”
+    “email” = “scyllabuss1@codecademy.com”
+  }
+}
+
+---Request Body---
+{
+  “user”: {
+    "id": <Integer>,
+    “username”: <String>,
+    “password”:  <String>
+  }
+}
